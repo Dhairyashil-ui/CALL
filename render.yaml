@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: astra-ai-voice-agent
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GROQ_MODEL
+        value: "llama-3.1-8b-instant"
+      - key: GROQ_FALLBACK_MODEL
+        value: "qwen/qwen3.8-27b"
+      - key: TWILIO_ACCOUNT_SID
+        sync: false
+      - key: TWILIO_AUTH_TOKEN
+        sync: false
+      - key: TWILIO_PHONE_NUMBER
+        value: "+18023066611"
+      - key: EDGE_VOICE
+        value: "en-US-JennyNeural"

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astra AI — Automated Job & Internship Verification Voice Agent</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <!-- Ambient background glow elements -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header Navigation -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="brand-logo">
+        <div class="logo-orb">
+          <i data-lucide="sparkles"></i>
+        </div>
+        <div class="brand-text">
+          <h1>ASTRA <span class="accent-text">AI</span></h1>
+          <p class="brand-tagline">Official Job & Talent Verification Agent</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="header-center">
+      <div class="status-pill" id="system-status-pill">
+        <span class="pulse-dot"></span>
+        <span id="status-label">Voice Agent Online</span>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="twilio-badge">
+        <i data-lucide="phone-call"></i>
+        <div class="twilio-info">
+          <span class="badge-label">Twilio Inbound Line</span>
+          <span class="badge-number">+1 (802) 306-6611</span>
+        </div>
+      </div>
+      <button class="btn-refresh" id="btn-refresh-status" title="Refresh Status">
+        <i data-lucide="refresh-cw"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <main class="main-container">
+    
+    <!-- Left Column: Voice Agent Simulator & Outbound Phone Dialer -->
+    <section class="panel simulator-panel">
+      
+      <!-- Panel Header Tabs -->
+      <div class="panel-header">
+        <div class="tab-group">
+          <button class="tab-btn active" data-tab="voice-sim">
+            <i data-lucide="mic"></i> Interactive Voice Simulator
+          </button>
+          <button class="tab-btn" data-tab="phone-dialer">
+            <i data-lucide="phone-outgoing"></i> Live Phone Dialer
+          </button>
+        </div>
+      </div>
+
+      <!-- Tab 1: Voice Simulator -->
+      <div class="tab-content active" id="tab-voice-sim">
+        <!-- Visualizer Canvas & Waveform -->
+        <div class="visualizer-container">
+          <canvas id="audio-visualizer" width="450" height="120"></canvas>
+          <div class="voice-state-indicator">
+            <span id="voice-state-text">Ready to talk. Click the microphone or type below.</span>
+          </div>
+        </div>
+
+        <!-- Conversation Stream -->
+        <div class="chat-stream" id="chat-stream">
+          <!-- Initial Welcome Message from Alex -->
+          <div class="chat-message agent-msg">
+            <div class="avatar-ring agent-avatar">
+              <i data-lucide="bot"></i>
+            </div>
+            <div class="msg-bubble">
+              <div class="msg-author">Alex <span class="role-badge">Astra AI Verification Rep</span></div>
+              <p>Hello! Thank you for calling Astra AI Talent Verification. Please state the candidate’s full name or Candidate ID you would like to verify today.</p>
+              <span class="msg-time">Just now</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Voice & Text Input Controls -->
+        <div class="input-action-bar">
+          <button class="btn-mic" id="btn-mic-toggle" title="Click to speak">
+            <i data-lucide="mic" id="mic-icon"></i>
+            <span class="mic-ripple"></span>
+          </button>
+
+          <div class="text-input-wrap">
+            <input type="text" id="text-input" placeholder="Ask about Dhairyashil Shinde, Emily Chen, or ID...">
+            <button class="btn-send" id="btn-send-message">
+              <i data-lucide="send"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Query Chips -->
+        <div class="quick-chips">
+          <span class="chips-label">Quick Test:</span>
+          <button class="chip" data-query="Can you verify Dhairyashil Shinde?">Verify Dhairyashil Shinde</button>
+          <button class="chip" data-query="Verify Candidate ID AST-AI-091">Check AST-AI-091</button>
+          <button class="chip" data-query="What kind of benchmarking did Dhairyashil do?">Benchmarking details</button>
+          <button class="chip" data-query="Can you verify Emily Chen?">Verify Emily Chen (US)</button>
+          <button class="chip" data-query="What does Astra AI do?">About Astra AI</button>
+        </div>
+      </div>
+
+      <!-- Tab 2: Outbound Phone Dialer -->
+      <div class="tab-content" id="tab-phone-dialer">
+        <div class="dialer-wrapper">
+          <div class="dialer-card">
+            <div class="dialer-icon-header">
+              <div class="phone-ring-icon">
+                <i data-lucide="phone-forwarded"></i>
+              </div>
+              <h3>Ring Your Personal Phone</h3>
+              <p>Enter your mobile number. Astra AI's Twilio line (<code>+18023066611</code>) will place an outbound call to your phone, and the verification agent will speak to you in real-time!</p>
+            </div>
+
+            <div class="form-group">
+              <label for="dialer-phone-input">Phone Number (with Country Code)</label>
+              <div class="input-with-icon">
+                <i data-lucide="globe"></i>
+                <input type="tel" id="dialer-phone-input" placeholder="+919876543210 or +1234567890">
+              </div>
+              <small class="helper-text">Examples: <code>+919876543210</code> (India), <code>+18023066611</code> (US)</small>
+            </div>
+
+            <div class="form-group">
+              <label for="dialer-base-url">Server Public Webhook URL</label>
+              <div class="input-with-icon">
+                <i data-lucide="link"></i>
+                <input type="url" id="dialer-base-url" placeholder="https://your-tunnel.trycloudflare.com or ngrok">
+              </div>
+              <small class="helper-text">Required for Twilio to stream audio from your local server. Run <code>python start_tunnel.py</code> to get one automatically.</small>
+            </div>
+
+            <button class="btn-action-primary" id="btn-start-call">
+              <i data-lucide="phone"></i> Initiate Verification Call
+            </button>
+
+            <div class="dialer-feedback" id="dialer-feedback" style="display: none;"></div>
+          </div>
+
+          <!-- Inbound Configuration Help -->
+          <div class="inbound-card">
+            <h4><i data-lucide="radio"></i> Inbound Calling Instructions</h4>
+            <p>To call the agent from your mobile phone right now:</p>
+            <ol>
+              <li>Run the tunnel runner: <code>python start_tunnel.py</code></li>
+              <li>It automatically links Twilio number <strong>+1 (802) 306-6611</strong> to your local agent.</li>
+              <li>Dial <strong>+1 (802) 306-6611</strong> from any phone, and speak to Alex!</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Right Column: Candidate Directory & Astra AI Platform Dossier -->
+    <section class="panel directory-panel">
+      
+      <div class="directory-header">
+        <div class="directory-title-wrap">
+          <h2><i data-lucide="users"></i> Verified Talent Directory</h2>
+          <span class="count-tag" id="candidate-count">11 Verified Interns</span>
+        </div>
+
+        <div class="search-filter-bar">
+          <div class="search-input-box">
+            <i data-lucide="search"></i>
+            <input type="text" id="candidate-search" placeholder="Search by name, Candidate ID, role, or country...">
+          </div>
+          <div class="filter-pills">
+            <button class="pill active" data-filter="all">All</button>
+            <button class="pill" data-filter="featured">Featured (Dhairyashil)</button>
+            <button class="pill" data-filter="india">India 🇮🇳</button>
+            <button class="pill" data-filter="us">United States 🇺🇸</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Candidate Cards Grid -->
+      <div class="candidate-grid" id="candidate-grid">
+        <!-- Rendered via JavaScript -->
+      </div>
+
+      <!-- Astra AI Platform Capabilities Drawer -->
+      <div class="platform-dossier">
+        <div class="dossier-header" id="dossier-toggle">
+          <div class="dossier-title">
+            <i data-lucide="book-open-check"></i>
+            <span>About Astra AI Platform & Verification Standards</span>
+          </div>
+          <i data-lucide="chevron-down" id="dossier-chevron"></i>
+        </div>
+        <div class="dossier-content" id="dossier-body">
+          <p class="company-desc">
+            <strong>Astra AI</strong> develops an AI-powered education and study platform helping students worldwide prepare for exams using their notes, PDFs, lecture slides, past papers, and study photos.
+          </p>
+          <div class="feature-badges">
+            <span class="feat-badge"><i data-lucide="brain"></i> AI Tutoring</span>
+            <span class="feat-badge"><i data-lucide="compass"></i> Guided Lessons</span>
+            <span class="feat-badge"><i data-lucide="help-circle"></i> Adaptive Quizzes</span>
+            <span class="feat-badge"><i data-lucide="layers"></i> Smart Flashcards</span>
+            <span class="feat-badge"><i data-lucide="headphones"></i> Audio Study Podcasts</span>
+            <span class="feat-badge"><i data-lucide="trending-up"></i> Knowledge-Gap Analysis</span>
+            <span class="feat-badge"><i data-lucide="mic"></i> Oral Mock Exams (Voice AI)</span>
+            <span class="feat-badge"><i data-lucide="file-text"></i> Written Mock Exams</span>
+          </div>
+          <div class="rule-callout">
+            <i data-lucide="shield-alert"></i>
+            <div>
+              <strong>Strict Agent Verification Policy:</strong> The agent is programmed to <em>always state the Candidate ID first</em> before reciting any verified role, schedule, or project benchmarking details.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- Candidate Details Modal -->
+  <div class="modal-overlay" id="candidate-modal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <div class="modal-id-badge" id="modal-candidate-id">AST-AI-091</div>
+        <button class="btn-close-modal" id="btn-close-modal">
+          <i data-lucide="x"></i>
+        </button>
+      </div>
+      <div class="modal-body" id="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+      <div class="modal-footer">
+        <button class="btn-action-primary" id="btn-modal-test-voice">
+          <i data-lucide="volume-2"></i> Inquire via Voice Agent
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="/static/js/visualizer.js"></script>
+  <script src="/static/js/app.js"></script>
+</body>
+</html>

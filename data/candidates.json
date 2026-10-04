@@ -1,0 +1,239 @@
+{
+  "company": {
+    "name": "Astra AI",
+    "alternate_name": "AI Astra",
+    "description": "Astra AI develops an AI-powered education and study platform that helps students prepare for exams using their notes, PDFs, slides, past papers, photos, and other study material.",
+    "core_features": [
+      "AI Tutoring",
+      "Guided Lessons",
+      "Interactive Quizzes",
+      "Smart Flashcards",
+      "Audio Study Podcasts",
+      "Knowledge-Gap Analysis",
+      "Oral Mock Exams (Voice AI)",
+      "Written Mock Exams with automated scoring"
+    ],
+    "verification_department": "Astra AI Global Talent Verification & HR Operations",
+    "support_email": "verification@astraai.study",
+    "phone": "+18023066611"
+  },
+  "candidates": [
+    {
+      "id": "AST-AI-091",
+      "name": "Dhairyashil Shinde",
+      "aliases": ["Dhairyashil", "Dhairya", "Shinde"],
+      "region": "India",
+      "role": "AI Intern",
+      "department": "Artificial Intelligence & Core Architecture",
+      "duration": "1 Month",
+      "period": "1 September 2026 to 1 October 2026",
+      "status": "Verified & Completed",
+      "working_hours": "10:00 AM to 3:00 PM Indian Standard Time (IST)",
+      "night_meetings": "Yes, actively attended evening cross-timezone alignment and engineering sync meetings with global teams",
+      "technical_domain": "AI Internal Concepts & Benchmarking",
+      "responsibilities": [
+        "Conducted comprehensive benchmarking on educational large language models (evaluating inference latency, context retention, and reasoning accuracy for exam generation).",
+        "Investigated AI internal concepts including prompt optimization, RAG retrieval quality, and benchmark evaluation suites.",
+        "Collaborated with cross-functional global teams during night sync calls to align on platform benchmark standards.",
+        "Delivered comparative benchmark reports evaluating model speed vs response fidelity across student question datasets."
+      ],
+      "supervisor_recommendation": "Highly recommended. Exhibited strong analytical ability, rigorous approach to AI benchmarking, and remarkable discipline across dual-timezone schedules."
+    },
+    {
+      "id": "AST-IN-2024-012",
+      "name": "Aarav Sharma",
+      "aliases": ["Aarav"],
+      "region": "India",
+      "role": "Full Stack Engineering Intern",
+      "department": "Platform Engineering",
+      "duration": "3 Months",
+      "period": "March 2024 - May 2024",
+      "status": "Verified & Completed",
+      "working_hours": "9:00 AM to 5:00 PM Indian Standard Time (IST)",
+      "night_meetings": "Occasional bi-weekly sprint syncs",
+      "technical_domain": "Oral Mock Exam Audio Streaming UI & PDF Ingestion",
+      "responsibilities": [
+        "Built low-latency audio streaming interfaces for Astra AI's oral mock examination simulator.",
+        "Integrated multi-format PDF and slide document parsing pipeline for study material processing.",
+        "Optimized frontend responsive layouts for mobile and tablet study views."
+      ],
+      "supervisor_recommendation": "Strong engineering fundamentals and excellent full-stack delivery."
+    },
+    {
+      "id": "AST-IN-2024-018",
+      "name": "Ananya Patel",
+      "aliases": ["Ananya"],
+      "region": "India",
+      "role": "NLP & Data Science Intern",
+      "department": "Machine Learning Research",
+      "duration": "2 Months",
+      "period": "April 2024 - June 2024",
+      "status": "Verified & Completed",
+      "working_hours": "11:00 AM to 4:00 PM Indian Standard Time (IST)",
+      "night_meetings": "Attended weekly research syncs at 8:30 PM IST",
+      "technical_domain": "Flashcard Generation & Knowledge-Gap Analysis",
+      "responsibilities": [
+        "Tuned algorithmic pipelines that generate spaced-repetition flashcards from lecture notes.",
+        "Built the diagnostic knowledge-gap scoring matrix highlighting weak subject areas for exam students.",
+        "Analyzed student quiz attempt data to identify common learning misconceptions."
+      ],
+      "supervisor_recommendation": "Exceptional grasp of NLP, analytical rigor, and collaborative spirit."
+    },
+    {
+      "id": "AST-IN-2024-025",
+      "name": "Rohan Verma",
+      "aliases": ["Rohan"],
+      "region": "India",
+      "role": "Frontend Engineering Intern",
+      "department": "User Experience Engineering",
+      "duration": "1 Month",
+      "period": "July 2024 - August 2024",
+      "status": "Verified & Completed",
+      "working_hours": "10:00 AM to 4:00 PM Indian Standard Time (IST)",
+      "night_meetings": "No regular night meetings; daytime agile standups",
+      "technical_domain": "Interactive Study Dashboard & Quiz Modules",
+      "responsibilities": [
+        "Implemented interactive quiz modules with instant hint systems and timers.",
+        "Refactored student analytics views displaying mastery percentages across syllabus topics."
+      ],
+      "supervisor_recommendation": "Quick learner with great attention to UI details and clean code."
+    },
+    {
+      "id": "AST-IN-2024-033",
+      "name": "Priya Nair",
+      "aliases": ["Priya"],
+      "region": "India",
+      "role": "AI Evaluation Intern",
+      "department": "Quality & Evaluation",
+      "duration": "2 Months",
+      "period": "January 2024 - March 2024",
+      "status": "Verified & Completed",
+      "working_hours": "10:00 AM to 3:00 PM Indian Standard Time (IST)",
+      "night_meetings": "Yes, attended weekly US alignment meetings at 9:00 PM IST",
+      "technical_domain": "Written Mock Exam Rubrics & Automated Grading",
+      "responsibilities": [
+        "Formulated standardized evaluation rubrics for grading handwritten and typed student essay answers.",
+        "Validated AI automated feedback consistency against standardized exam benchmarks."
+      ],
+      "supervisor_recommendation": "Diligent, precise, and demonstrated high standards for educational assessment."
+    },
+    {
+      "id": "AST-IN-2024-045",
+      "name": "Vikramaditya Joshi",
+      "aliases": ["Vikram", "Vikramaditya"],
+      "region": "India",
+      "role": "Cloud Infrastructure Intern",
+      "department": "DevOps & Infrastructure",
+      "duration": "2 Months",
+      "period": "February 2024 - April 2024",
+      "status": "Verified & Completed",
+      "working_hours": "9:00 AM to 4:00 PM Indian Standard Time (IST)",
+      "night_meetings": "Participated in scheduled release deployments",
+      "technical_domain": "Scalable Document OCR & Ingestion Pipeline",
+      "responsibilities": [
+        "Deployed serverless worker queues to process photos of handwritten notes uploaded by students.",
+        "Optimized AWS/GCP storage costs and OCR extraction throughput."
+      ],
+      "supervisor_recommendation": "Reliable systems engineer with practical cloud knowledge."
+    },
+    {
+      "id": "AST-US-2024-101",
+      "name": "Emily Chen",
+      "aliases": ["Emily"],
+      "region": "United States",
+      "role": "Product & AI Research Intern",
+      "department": "Product Innovation",
+      "duration": "3 Months",
+      "period": "June 2024 - August 2024",
+      "status": "Verified & Completed in High Standing",
+      "working_hours": "9:00 AM to 5:00 PM Eastern Standard Time (EST)",
+      "night_meetings": "Coordinated morning/evening handoffs with APAC engineering team",
+      "technical_domain": "Oral Mock Exam Rubrics & Adaptive Study Paths",
+      "responsibilities": [
+        "Designed the pedagogical framework for Astra AI's interactive voice oral mock examiner.",
+        "Conducted user testing with 150+ high school and university students preparing for finals.",
+        "Authored product requirement specs for knowledge-gap diagnostic reporting."
+      ],
+      "supervisor_recommendation": "Outstanding product intuition, user empathy, and strategic thinking."
+    },
+    {
+      "id": "AST-US-2024-108",
+      "name": "Michael Davis",
+      "aliases": ["Michael", "Mike"],
+      "region": "United States",
+      "role": "Backend Systems Intern",
+      "department": "Core Backend Engineering",
+      "duration": "2 Months",
+      "period": "May 2024 - July 2024",
+      "status": "Verified & Completed",
+      "working_hours": "10:00 AM to 6:00 PM Pacific Standard Time (PST)",
+      "night_meetings": "Flexible; occasional Pacific-evening engineering syncs",
+      "technical_domain": "Vector Retrieval for Textbooks & Past Exam Papers",
+      "responsibilities": [
+        "Implemented hybrid semantic and keyword search across thousands of pages of academic past papers.",
+        "Reduced RAG retrieval latency by 42% utilizing vector index caching and query rewriting.",
+        "Built automated integration test suites for core API endpoints."
+      ],
+      "supervisor_recommendation": "High performance backend developer with solid architectural mindset."
+    },
+    {
+      "id": "AST-US-2024-114",
+      "name": "Sarah Jenkins",
+      "aliases": ["Sarah"],
+      "region": "United States",
+      "role": "Educational Content & AI Testing Intern",
+      "department": "Curriculum & Assessment",
+      "duration": "1 Month",
+      "period": "July 2024 - August 2024",
+      "status": "Verified & Completed",
+      "working_hours": "9:00 AM to 2:00 PM Central Standard Time (CST)",
+      "night_meetings": "None",
+      "technical_domain": "AP & SAT Past Paper Question Decomposition",
+      "responsibilities": [
+        "Audited 1,200+ standardized past-exam questions across STEM and humanities subjects.",
+        "Benchmarked AI model explanations against official college board answer keys.",
+        "Flagged reasoning edge-cases in multi-step physics and calculus solutions."
+      ],
+      "supervisor_recommendation": "Detail-oriented, thorough, and highly dedicated to instructional accuracy."
+    },
+    {
+      "id": "AST-US-2024-120",
+      "name": "Lucas Miller",
+      "aliases": ["Lucas"],
+      "region": "United States",
+      "role": "Audio AI Intern",
+      "department": "Voice & Media AI",
+      "duration": "2 Months",
+      "period": "June 2024 - August 2024",
+      "status": "Verified & Completed",
+      "working_hours": "10:00 AM to 5:00 PM Eastern Standard Time (EST)",
+      "night_meetings": "Weekly cross-timezone audio team catchup",
+      "technical_domain": "Audio Study Podcast Generation from Notes",
+      "responsibilities": [
+        "Developed two-host conversational script generator that transforms dense study notes into educational podcasts.",
+        "Tuned voice inflection, pacing, and chapter markers for audio study guides.",
+        "Reduced podcast audio synthesis rendering time by 35%."
+      ],
+      "supervisor_recommendation": "Innovative audio engineer who brought creative passion to educational media."
+    },
+    {
+      "id": "AST-US-2024-127",
+      "name": "Jessica Taylor",
+      "aliases": ["Jessica"],
+      "region": "United States",
+      "role": "UI/UX Design Intern",
+      "department": "Design & User Research",
+      "duration": "3 Months",
+      "period": "May 2024 - August 2024",
+      "status": "Verified & Completed",
+      "working_hours": "9:00 AM to 4:00 PM Eastern Standard Time (EST)",
+      "night_meetings": "Bi-weekly design review sessions",
+      "technical_domain": "Knowledge-Gap Radar & Exam Readiness Dashboard",
+      "responsibilities": [
+        "Crafted Figma design systems and component libraries for student study workspace.",
+        "Designed the visual 'Knowledge Gap Radar' helping students pinpoint unmastered topics before test day."
+      ],
+      "supervisor_recommendation": "Talented designer with deep empathy for student test anxiety."
+    }
+  ]
+}
